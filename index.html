@@ -1,26 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Ask Her Out</title>
-    <link rel="icon" type="image/png" href="./images/cat.jpg" />
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Will You Be My Valentine? 💖</title>
+  <link rel="icon" type="image/png" href="./images/cat.jpg" />
+  <link rel="stylesheet" href="./style.css">
 
-    <link rel="stylesheet" href="./style.css" />
-  </head>
-  <body>
-    <div class="container">
-      <img 
-        src="https://tenor.com/view/manja-gif-22885016.gif" 
-        alt="Manja Sticker" 
-        class="gif"
-      >
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+</head>
+<body>
+  <div class="container">
+
+    <!-- INDEX PAGE -->
+    <div id="page-index" class="page active">
+      <img src="https://tenor.com/view/manja-gif-22885016.gif" alt="Manja Sticker" class="gif">
       <h1>Will You be my Valentine? 🤗</h1>
-
       <div class="btn">
-        <a href="yes.html">Yes</a>
-        <a href="no1.html">No</a>
+        <button onclick="showPage('yes')">Yes</button>
+        <button onclick="showPage('no1')">No</button>
       </div>
     </div>
-  </body>
+
+    <!-- YES PAGE -->
+    <div id="page-yes" class="page">
+      <button class="back-btn" onclick="showPage('index')">← Back</button>
+      <img src="https://tenor.com/view/mochi-cat-mochi-and-goma-goma-and-peach-mochi-mochi-peach-cat-gif-gif-253027946666209433.gif" alt="Mochi Cat" class="gif">
+      <h1>Hehehehe, I knew it! 😘</h1>
+    </div>
+
+    <!-- NO1 PAGE -->
+    <div id="page-no1" class="page">
+      <img src="https://tenor.com/view/mochi-gif-22050818.gif" alt="Mochi Sticker" class="gif">
+      <h1>Why?</h1>
+      <div class="btn">
+        <button onclick="showPage('yes')">Yes</button>
+        <button onclick="showPage('no2')">No</button>
+      </div>
+    </div>
+
+    <!-- NO2 PAGE -->
+    <div id="page-no2" class="page">
+      <img src="https://tenor.com/view/couple-forgive-me-asking-for-forgiveness-begging-crying-gif-15195810.gif" alt="Another Sticker" class="gif">
+      <h1>Are you sure? 😢</h1>
+      <div class="btn">
+        <button onclick="showPage('yes')">Yes</button>
+        <button onclick="showPage('no3')">No</button>
+      </div>
+    </div>
+
+    <!-- NO3 PAGE -->
+    <div id="page-no3" class="page">
+      <button class="back-btn" onclick="showPage('index')">← Back</button>
+      <img src="https://tenor.com/view/banana-cat-crying-banana-cat-gif-5454889781643953619.gif" alt="Last Sticker" class="gif">
+      <h1>Oh no! 😭 Maybe next time...</h1>
+    </div>
+
+  </div>
+</body>
+<script src="./script.js"></script>
 </html>

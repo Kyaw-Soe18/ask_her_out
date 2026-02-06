@@ -1,11 +1,15 @@
-function moveRandomEl(elm) {
-  elm.style.position = "absolute";
-  elm.style.top = Math.floor(Math.random() * 90 + 5) + "%";
-  elm.style.left = Math.floor(Math.random() * 90 + 5) + "%";
-}
 
-const moveRandom = document.querySelector("#move-random");
+    function showPage(pageId) {
+      
+      document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+      // Show target page
+      document.getElementById('page-' + pageId).classList.add('active');
 
-moveRandom.addEventListener("mouseenter", function (e) {
-  moveRandomEl(e.target);
-});
+      if(pageId === 'yes') {
+        confetti({
+          particleCount: 150,
+          spread: 70,
+          origin: { y: 0.6 }
+        });
+      }
+    }
